@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReactJS Web Page</title>
+  <style>
+    
+    h1 {
+      color: #000000;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: color 0.3s; 
+    }
+
+    
+    h1:hover {
+      color: #4df2ef; 
+    }
+
+    
+    h2 {
+      color: #0f1010;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    
+    p {
+      text-align: center;
+    }
+    body{
+        background: linear-gradient(to right, #ff0066, #0099ff);;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+ 
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  
+  <script>
+    
+    const App = () => {
+      return React.createElement('div', { className: 'container' },
+        React.createElement('h2', null, 'TOPIC COVERED'),
+        React.createElement('section', null,
+          React.createElement('a', { href: '#', style: { textDecoration: 'none', color: 'inherit' } },
+            React.createElement('h1', null, 'getting started with the web')
+          ),
+          React.createElement('p', null, 'Provide a practical introduction to web development for complete beginners')
+        ),
+        React.createElement('section', null,
+          React.createElement('a', { href: '#', style: { textDecoration: 'none', color: 'inherit' } },
+            React.createElement('h1', null, 'HTML - Structuring the Web')
+          ),
+          React.createElement('p', null, 'This is the HTML section. It provides information on structuring the web using HTML.')
+        ),
+        React.createElement('section', null,
+          React.createElement('a', { href: '#', style: { textDecoration: 'none', color: 'inherit' } },
+            React.createElement('h1', null, 'CSS - Styling the Web')
+          ),
+          React.createElement('p', null, 'This is the CSS section. It covers styling the web using CSS.')
+        )
+      );
+    };
+
+    
+    ReactDOM.render(
+      React.createElement(App),
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
